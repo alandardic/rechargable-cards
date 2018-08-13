@@ -20,11 +20,60 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 
 const dashboardRoutes = [
   {
+    path: "/dashboard",
+    sidebarName: "Dashboard",
+    navbarName: "HR Admin Dashboard",
+    icon: Dashboard,
+    component: DashboardPage
+  },
+  {
     path: "/user",
     sidebarName: "User Profile",
     navbarName: "Profile",
     icon: Person,
     component: UserProfile
+  },
+  {
+    path: "/table",
+    sidebarName: "Transactions",
+    navbarName: "Transactions",
+    icon: LibraryBooks,
+    component: TableList
+  },
+  {
+    path: "/typography",
+    sidebarName: "Employees",
+    navbarName: "Employees",
+    icon: "content_paste",
+    component: Typography
+  },
+  {
+    path: "/icons",
+    sidebarName: "Groups & Rules",
+    navbarName: "Groups & Rules",
+    icon: BubbleChart,
+    component: Icons
+  },
+  {
+    path: "/maps",
+    sidebarName: "Reports",
+    navbarName: "Reports",
+    icon: ChartLine,
+    component: Maps
+  },
+  {
+    path: "/notifications",
+    sidebarName: "Notifications",
+    navbarName: "Notifications",
+    icon: Notifications,
+    component: NotificationsPage
+  },
+  {
+    path: "/upgrade-to-pro",
+    sidebarName: "Invite members",
+    navbarName: "Invite members",
+    icon: Unarchive,
+    component: UpgradeToPro
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];

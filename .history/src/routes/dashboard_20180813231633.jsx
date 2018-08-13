@@ -20,6 +20,13 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 
 const dashboardRoutes = [
   {
+    path: "/dashboard",
+    sidebarName: "Dashboard",
+    navbarName: "HR Admin Dashboard",
+    icon: Dashboard,
+    component: DashboardPage
+  },
+  {
     path: "/user",
     sidebarName: "User Profile",
     navbarName: "Profile",
