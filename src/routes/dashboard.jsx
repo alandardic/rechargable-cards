@@ -4,9 +4,10 @@ import Person from "@material-ui/icons/Person";
 // import ContentPaste from "@material-ui/icons/ContentPaste";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
+// import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
+import ChartLine from "@material-ui/icons/Timer";
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
@@ -21,7 +22,7 @@ const dashboardRoutes = [
   {
     path: "/dashboard",
     sidebarName: "Dashboard",
-    navbarName: "Material Dashboard",
+    navbarName: "HR Admin Dashboard",
     icon: Dashboard,
     component: DashboardPage
   },
@@ -34,30 +35,30 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    sidebarName: "Table List",
-    navbarName: "Table List",
-    icon: "content_paste",
+    sidebarName: "Transactions",
+    navbarName: "Transactions",
+    icon: LibraryBooks,
     component: TableList
   },
   {
     path: "/typography",
-    sidebarName: "Typography",
-    navbarName: "Typography",
-    icon: LibraryBooks,
+    sidebarName: "Employees",
+    navbarName: "Employees",
+    icon: "content_paste",
     component: Typography
   },
   {
     path: "/icons",
-    sidebarName: "Icons",
-    navbarName: "Icons",
+    sidebarName: "Groups & Rules",
+    navbarName: "Groups & Rules",
     icon: BubbleChart,
     component: Icons
   },
   {
     path: "/maps",
-    sidebarName: "Maps",
-    navbarName: "Map",
-    icon: LocationOn,
+    sidebarName: "Reports",
+    navbarName: "Reports",
+    icon: ChartLine,
     component: Maps
   },
   {
@@ -69,8 +70,8 @@ const dashboardRoutes = [
   },
   {
     path: "/upgrade-to-pro",
-    sidebarName: "Upgrade To PRO",
-    navbarName: "Upgrade To PRO",
+    sidebarName: "Invite members",
+    navbarName: "Invite members",
     icon: Unarchive,
     component: UpgradeToPro
   },

@@ -13,7 +13,8 @@ import LocalOffer from "@material-ui/icons/LocalOffer";
 import Update from "@material-ui/icons/Update";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
-import Accessibility from "@material-ui/icons/Accessibility";
+// import Accessibility from "@material-ui/icons/Accessibility";
+import Money from "@material-ui/icons/AttachMoney";
 import BugReport from "@material-ui/icons/BugReport";
 import Code from "@material-ui/icons/Code";
 import Cloud from "@material-ui/icons/Cloud";
@@ -62,12 +63,18 @@ class Dashboard extends React.Component {
                 <CardIcon color="warning">
                   <Icon>content_copy</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Used Space</p>
+                <p className={classes.cardCategory}>Active Members</p>
                 <h3 className={classes.cardTitle}>
-                  49/50 <small>GB</small>
+                  459/500 <small />
                 </h3>
               </CardHeader>
               <CardFooter stats>
+                <div className={classes.stats}>
+                  <Update />
+                  Just Updated
+                </div>
+              </CardFooter>
+              {/* <CardFooter stats>
                 <div className={classes.stats}>
                   <Danger>
                     <Warning />
@@ -77,6 +84,7 @@ class Dashboard extends React.Component {
                   </a>
                 </div>
               </CardFooter>
+              */}
             </Card>
           </GridItem>
           <GridItem xs={12} sm={6} md={3}>
@@ -85,13 +93,13 @@ class Dashboard extends React.Component {
                 <CardIcon color="success">
                   <Store />
                 </CardIcon>
-                <p className={classes.cardCategory}>Revenue</p>
-                <h3 className={classes.cardTitle}>$34,245</h3>
+                <p className={classes.cardCategory}>Payable (NIS)</p>
+                <h3 className={classes.cardTitle}>141,372</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
                   <DateRange />
-                  Last 24 Hours
+                  02/09/18
                 </div>
               </CardFooter>
             </Card>
@@ -102,13 +110,13 @@ class Dashboard extends React.Component {
                 <CardIcon color="danger">
                   <Icon>info_outline</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Fixed Issues</p>
-                <h3 className={classes.cardTitle}>75</h3>
+                <p className={classes.cardCategory}>Unused Balance</p>
+                <h3 className={classes.cardTitle}>212,058</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
                   <LocalOffer />
-                  Tracked from Github
+                  Tracked from your settings
                 </div>
               </CardFooter>
             </Card>
@@ -117,10 +125,10 @@ class Dashboard extends React.Component {
             <Card>
               <CardHeader color="info" stats icon>
                 <CardIcon color="info">
-                  <Accessibility />
+                  <Money />
                 </CardIcon>
-                <p className={classes.cardCategory}>Followers</p>
-                <h3 className={classes.cardTitle}>+245</h3>
+                <p className={classes.cardCategory}>Cashback</p>
+                <h3 className={classes.cardTitle}>+24,500</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
@@ -144,12 +152,12 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Daily Sales</h4>
+                <h4 className={classes.cardTitle}>Daily Overview</h4>
                 <p className={classes.cardCategory}>
                   <span className={classes.successText}>
                     <ArrowUpward className={classes.upArrowCardCategory} /> 55%
                   </span>{" "}
-                  increase in today sales.
+                  increase in today transactions.
                 </p>
               </CardBody>
               <CardFooter chart>
@@ -172,14 +180,12 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-                <p className={classes.cardCategory}>
-                  Last Campaign Performance
-                </p>
+                <h4 className={classes.cardTitle}>Monthly Overview</h4>
+                <p className={classes.cardCategory}>Average usage per user</p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> campaign sent 2 days ago
+                  <AccessTime /> updated 2 weeks ago
                 </div>
               </CardFooter>
             </Card>
@@ -196,20 +202,20 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Completed Tasks</h4>
+                <h4 className={classes.cardTitle}>Hourly Distribution</h4>
                 <p className={classes.cardCategory}>
-                  Last Campaign Performance
+                  Hour limitations weren't set
                 </p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> campaign sent 2 days ago
+                  <AccessTime /> updated 2 minutes ago
                 </div>
               </CardFooter>
             </Card>
           </GridItem>
         </GridContainer>
-        <GridContainer>
+        {/*<GridContainer>
           <GridItem xs={12} sm={12} md={6}>
             <CustomTabs
               title="Tasks:"
@@ -273,7 +279,7 @@ class Dashboard extends React.Component {
               </CardBody>
             </Card>
           </GridItem>
-        </GridContainer>
+                </GridContainer>*/}
       </div>
     );
   }
