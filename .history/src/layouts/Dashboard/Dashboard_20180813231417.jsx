@@ -71,7 +71,7 @@ class App extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <div className={classes.wrapper}>
-        {/*<Sidebar
+        <Sidebar
           routes={dashboardRoutes}
           logoText={"Intel Israel"}
           logo={logo}
@@ -80,14 +80,13 @@ class App extends React.Component {
           open={this.state.mobileOpen}
           color="blue"
           {...rest}
-        /> */}
+        />
         <div className={classes.mainPanel} ref="mainPanel">
-          {/*<Header
+          <Header
             routes={dashboardRoutes}
             handleDrawerToggle={this.handleDrawerToggle}
             {...rest}
           />
-          */}
           {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
           {this.getRoute() ? (
             <div className={classes.content}>
