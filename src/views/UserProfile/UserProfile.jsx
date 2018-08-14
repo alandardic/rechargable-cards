@@ -2,6 +2,7 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputLabel from "@material-ui/core/InputLabel";
+import UpdloadIcon from "@material-ui/icons/Person";
 // core components
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -12,6 +13,7 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
+
 
 import avatar from "assets/img/faces/isracard-hr.jpg";
 
@@ -34,6 +36,7 @@ const styles = {
   }
 };
 
+// const Icon = UpdloadIcon;
 function UserProfile(props) {
   const { classes } = props;
   return (
@@ -42,14 +45,26 @@ function UserProfile(props) {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
+              <h4 className={classes.cardTitleWhite}>Group Admin onboarding form</h4>
               <p className={classes.cardCategoryWhite}>Complete your profile</p>
             </CardHeader>
             <CardBody>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={5}>
                   <CustomInput
-                    labelText="Intel"
+                    labelText="Intel Israel"
+                    id="company-disabled"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                    inputProps={{
+                      disabled: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={5}>
+                  <CustomInput
+                    labelText="ABN: 51102663"
                     id="company-disabled"
                     formControlProps={{
                       fullWidth: true
@@ -88,6 +103,8 @@ function UserProfile(props) {
                     }}
                   />
                 </GridItem>
+              <Button color="primary" children={UpdloadIcon} >Updload Company Logo</Button>
+
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText="Last Name"
@@ -119,7 +136,7 @@ function UserProfile(props) {
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
-                    labelText="Postal Code"
+                    labelText="6 Digits of company's card"
                     id="postal-code"
                     formControlProps={{
                       fullWidth: true
@@ -127,25 +144,10 @@ function UserProfile(props) {
                   />
                 </GridItem>
               </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={12}>
-                  <InputLabel style={{ color: "#AAAAAA" }}>About me</InputLabel>
-                  <CustomInput
-                    labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                    id="about-me"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                    inputProps={{
-                      multiline: true,
-                      rows: 5
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
+             
             </CardBody>
             <CardFooter>
-              <Button color="primary">Update Profile</Button>
+              <Button color="primary">CONTINUE>></Button>
             </CardFooter>
           </Card>
         </GridItem>
