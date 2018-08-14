@@ -14,7 +14,6 @@ import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 
-
 import avatar from "assets/img/faces/isracard-hr.jpg";
 
 const styles = {
@@ -33,6 +32,12 @@ const styles = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "3px",
     textDecoration: "none"
+  },
+  upload: {
+    display: "flex",
+    flexDirection: "row-reverse",
+    margin: "30px 1px 7px 0",
+    justifyContent: "space-between"
   }
 };
 
@@ -45,7 +50,9 @@ function UserProfile(props) {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Group Admin onboarding form</h4>
+              <h4 className={classes.cardTitleWhite}>
+                Group Admin onboarding form
+              </h4>
               <p className={classes.cardCategoryWhite}>Complete your profile</p>
             </CardHeader>
             <CardBody>
@@ -103,8 +110,11 @@ function UserProfile(props) {
                     }}
                   />
                 </GridItem>
-              <Button color="primary" children={UpdloadIcon} >Updload Company Logo</Button>
-
+                <div className>
+                  <Button color="primary" className={classes.upload}>
+                    Updload Company Logo
+                  </Button>
+                </div>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText="Last Name"
@@ -144,10 +154,14 @@ function UserProfile(props) {
                   />
                 </GridItem>
               </GridContainer>
-             
             </CardBody>
             <CardFooter>
-              <Button color="primary">CONTINUE>></Button>
+              <Button
+                color="primary"
+                href="https://shielded-journey-42770.herokuapp.com/user"
+              >
+                CONTINUE >>
+              </Button>
             </CardFooter>
           </Card>
         </GridItem>
