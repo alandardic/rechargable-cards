@@ -11,6 +11,8 @@ import ChartLine from "@material-ui/icons/Timer";
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
+import Business from "views/UserProfile/business.jsx";
+import Card from "views/UserProfile/card.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
@@ -25,6 +27,20 @@ const dashboardRoutes = [
     navbarName: "Profile",
     icon: Person,
     component: UserProfile
+  },
+  {
+    path: "/card",
+    sidebarName: "User Profile",
+    navbarName: "Profile",
+    icon: Person,
+    component: Card
+  },
+  {
+    path: "/business",
+    sidebarName: "User Profile",
+    navbarName: "Profile",
+    icon: Person,
+    component: Business
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
