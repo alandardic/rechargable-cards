@@ -10,9 +10,9 @@ import Unarchive from "@material-ui/icons/Unarchive";
 import ChartLine from "@material-ui/icons/Timer";
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
-import UserProfile from "views/UserProfile/UserProfile.jsx";
+import SystemAdmin from "views/UserProfile/SystemAdmin.jsx";
 import Business from "views/UserProfile/business.jsx";
-import Card from "views/UserProfile/card.jsx";
+import User from "views/UserProfile/user.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
@@ -22,18 +22,18 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 
 const dashboardRoutes = [
   {
+    path: "/system-admin",
+    sidebarName: "User Profile",
+    navbarName: "Profile",
+    icon: Person,
+    component: SystemAdmin
+  },
+  {
     path: "/user",
     sidebarName: "User Profile",
     navbarName: "Profile",
     icon: Person,
-    component: UserProfile
-  },
-  {
-    path: "/card",
-    sidebarName: "User Profile",
-    navbarName: "Profile",
-    icon: Person,
-    component: Card
+    component: User
   },
   {
     path: "/business",

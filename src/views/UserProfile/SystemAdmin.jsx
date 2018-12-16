@@ -51,7 +51,7 @@ function UserProfile(props) {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>
-                Group Admin onboarding form
+                Syatme Admin onboarding form
               </h4>
               <p className={classes.cardCategoryWhite}>Complete your profile</p>
             </CardHeader>
