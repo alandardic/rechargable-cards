@@ -71,7 +71,7 @@ class App extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <div className={classes.wrapper}>
-        {/*<Sidebar
+        {<Sidebar
           routes={dashboardRoutes}
           logoText={"Intel Israel"}
           logo={logo}
@@ -80,7 +80,7 @@ class App extends React.Component {
           open={this.state.mobileOpen}
           color="blue"
           {...rest}
-        /> */}
+        /> }
         <div className={classes.mainPanel} ref="mainPanel">
           <Header
             routes={dashboardRoutes}

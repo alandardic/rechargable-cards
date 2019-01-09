@@ -1,6 +1,6 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
-import Person from "@material-ui/icons/Person";
+import CreditCard from "@material-ui/icons/CreditCard";
 // import ContentPaste from "@material-ui/icons/ContentPaste";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
@@ -12,7 +12,8 @@ import ChartLine from "@material-ui/icons/Timer";
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import SystemAdmin from "views/UserProfile/SystemAdmin.jsx";
 import Business from "views/UserProfile/business.jsx";
-import User from "views/UserProfile/user.jsx";
+import Card from "views/UserProfile/card.jsx";
+// import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
@@ -22,25 +23,25 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 
 const dashboardRoutes = [
   {
-    path: "/system-admin",
-    sidebarName: "User Profile",
-    navbarName: "Profile",
-    icon: Person,
-    component: SystemAdmin
+    path: "/dashboard",
+    sidebarName: "Dashboard",
+    navbarName: "HR Admin Dashboard",
+    icon: Dashboard,
+    component: DashboardPage
   },
   {
-    path: "/user",
-    sidebarName: "User Profile",
+    path: "/card",
+    sidebarName: "Recharge Cards",
     navbarName: "Profile",
-    icon: Person,
-    component: User
+    icon: CreditCard,
+    component: Card
   },
   {
-    path: "/business",
-    sidebarName: "User Profile",
-    navbarName: "Profile",
-    icon: Person,
-    component: Business
+    path: "/transactions",
+    sidebarName: "Transactions",
+    navbarName: "Transactions",
+    icon: LibraryBooks,
+    component: TableList
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
